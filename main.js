@@ -18,6 +18,13 @@ for (const folder of commandFolders) {
 
 client.once('ready', () => {
 	console.log('Ready!');
+        bot.user.setPresence({
+    status: 'online',
+    activity: {
+        name: 'Sashimi pics',
+        type: 'WATCHING',
+    }
+})
 });
 
 client.on('message', message => {
