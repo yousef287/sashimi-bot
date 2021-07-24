@@ -18,13 +18,7 @@ for (const folder of commandFolders) {
 
 client.once('ready', () => {
 	console.log('Ready!');
-        bot.user.setPresence({
-    status: 'online',
-    activity: {
-        name: 'Sashimi pics',
-        type: 'WATCHING',
-    }
-})
+        client.user.setActivity('Sashimi pics', { type: 'WATCHING' });
 });
 
 client.on('message', message => {
@@ -88,5 +82,6 @@ client.on('message', message => {
 		message.reply('there was an error trying to execute that command!');
 	}
 });
+
 var token = process.env.token;
 client.login(token);
