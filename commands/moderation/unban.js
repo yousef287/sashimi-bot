@@ -1,5 +1,5 @@
 module.exports = {
-  name: "uunban",
+  name: "unban",
   description: "Unbans user with id",
   usage: `<UserID> [Reason]`,
   args: true,

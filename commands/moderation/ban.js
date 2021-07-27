@@ -1,10 +1,8 @@
-// const { Client } = require("discord.js");
-
 module.exports = {
   name: "ban",
   description: "Bans The user!",
   args: true,
-  usage: `<User/ID> [reason]`,
+  usage: `<User/ID> [Days] [reason]`,
   cooldown: 1,
   execute(message, args) {
     let user;
@@ -54,6 +52,13 @@ module.exports = {
             return message.channel.send("you can't ban a moderator/admin.");
 
           let reason = args.slice(1).join(" ");
+          let days = 0;
+
+          if (!isNaN(args.slice(1)[0])) {
+            reason = args.slice(2).join(" ");
+            days = args.slice(1)[0];
+          }
+
           let banEmbed = new Discord.MessageEmbed()
             .setColor("RANDOM")
             .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
@@ -61,9 +66,11 @@ module.exports = {
             .setDescription(`**Reason:** ` + reason)
             .setTimestamp();
 
-          member.ban({ ression: "ban", reason: reason }).then(() => {
-            message.channel.send(banEmbed + "this works");
-          });
+          member
+            .ban({ ression: "ban", days: days, reason: reason })
+            .then(() => {
+              message.channel.send(banEmbed);
+            });
         } else {
           message.channel.send("cannot find member");
         }

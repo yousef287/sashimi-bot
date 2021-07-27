@@ -1,5 +1,3 @@
-// const { Client } = require("discord.js");
-
 module.exports = {
   name: "kick",
   description: "Kicks The user!",

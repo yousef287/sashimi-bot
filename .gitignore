@@ -2,3 +2,4 @@
 
 /node_modules
 commands/moderation/test.js
+.vscode/launch.json
