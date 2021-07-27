@@ -7,7 +7,7 @@ module.exports = {
   usage: `<User/ID> [reason]`,
   cooldown: 1,
   execute(message, args) {
-    var user;
+    let user;
     const Discord = require("discord.js");
 
     if (!message.member.hasPermission("KICK_MEMBERS"))
@@ -21,7 +21,7 @@ module.exports = {
       //Because first arg is in format {username}#{four numbers}
 
       //Use message.member if a user with that tag is not found
-      var member = message.guild.members.cache.find(
+      let member = message.guild.members.cache.find(
         (mem) => mem.user.tag == args[0]
       );
       user = member.user;

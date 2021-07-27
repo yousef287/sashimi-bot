@@ -94,5 +94,5 @@ client.on("message", (message) => {
   }
 });
 //login token should be with heroku secret env key
-var token = process.env.token;
+let token = process.env.token;
 client.login(token);

@@ -6,10 +6,10 @@ Array.prototype.random = function () {
 module.exports = {
   name: "sashimi",
   description: "Sashimi pics!",
-  aliases: ['sas', 'sus'],
+  aliases: ["sas", "sus"],
   cooldown: 3,
   execute(message) {
-    var pics = [
+    let pics = [
       "https://cdn.discordapp.com/attachments/712097156541972511/716837536764264538/image0.jpg",
       "https://cdn.discordapp.com/attachments/712097156541972511/716838080820150373/image0.jpg",
       "https://cdn.discordapp.com/attachments/⁸/716543721964830751/image0.jpg",
