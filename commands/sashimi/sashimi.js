@@ -6,6 +6,7 @@ Array.prototype.random = function () {
 module.exports = {
   name: "sashimi",
   description: "Sashimi pics!",
+  aliases: ['sas', 'sus'],
   cooldown: 3,
   execute(message) {
     var pics = [
