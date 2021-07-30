@@ -5,9 +5,8 @@ module.exports = {
   usage: "<User/ID>",
   args: true,
   cooldown: 2,
-  execute(message, args) {
+  execute(client, message, args, Discord) {
     let user;
-    const Discord = require("discord.js");
 
     if (!isNaN(args[0]) && args[0].length == 18) {
       //An ID was specified

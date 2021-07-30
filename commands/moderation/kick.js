@@ -4,9 +4,9 @@ module.exports = {
   args: true,
   usage: `<User/ID> [reason]`,
   cooldown: 1,
-  execute(message, args) {
+  execute(client, message, args, Discord) {
     let user;
-    const Discord = require("discord.js");
+
 
     if (!message.member.hasPermission("KICK_MEMBERS"))
       return message.channel.send("you don't have permissions to ban.");

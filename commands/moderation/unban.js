@@ -4,8 +4,8 @@ module.exports = {
   usage: `<UserID> [Reason]`,
   args: true,
   cooldown: 1,
-  execute(message, args) {
-    const Discord = new require("discord.js");
+  execute(client, message, args, Discord) {
+
     if (!message.member.hasPermission("BAN_MEMBERS")) {
       return message.channel.send(
         `**${message.author.username}**, You do not have perms to unban someone`

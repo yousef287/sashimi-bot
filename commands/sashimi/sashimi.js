@@ -1,4 +1,3 @@
-const Discord = require("discord.js");
 
 Array.prototype.random = function () {
   return this[Math.floor(Math.random() * this.length)];
@@ -8,7 +7,7 @@ module.exports = {
   description: "Sashimi pics!",
   aliases: ["sas", "sus"],
   cooldown: 3,
-  execute(message) {
+  execute(client, message, args, Discord) {
     let pics = [
       "https://cdn.discordapp.com/attachments/712097156541972511/716837536764264538/image0.jpg",
       "https://cdn.discordapp.com/attachments/712097156541972511/716838080820150373/image0.jpg",
@@ -47,7 +46,7 @@ module.exports = {
       )
       .setImage(pics.random())
       .setTimestamp()
-      .setFooter("Stop wanking to sashimi bruv");
+      .setFooter("sashimi bruh");
 
     message.channel.send(sashimiEmbed);
   },

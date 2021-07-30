@@ -1,9 +1,9 @@
-const Discord = require('discord.js');
+
 module.exports = {
     name: "invite",
     description: "invite the bot to your server!",
     cooldown: 5,
-    execute(message) {
+    execute(client, message, args, Discord) {
       const invitemsg = new Discord.MessageEmbed()
       .setColor("RANDOM")
       .setTitle("Tap to add me to your server!")
